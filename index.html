@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지구의 숨결을 기록하다 | 온실가스 관측의 중요성과 글로벌 동향</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="기후변화 대응의 첫걸음, 온실가스 정밀 관측의 중요성을 부각하고 WMO, NOAA, NASA, Copernicus CAMS, AGAGE, 대한민국 기상청(KMA), IPCC 등 주요 기후 감시 기관 및 협력체의 최신 관측 동향과 혁신 프로젝트 정보를 전달합니다.">
+    <meta name="keywords" content="기후변화, 온실가스 관측, 이산화탄소 430ppm, 메탄 감시, WMO G3W, NOAA AGGI, NASA EMIT, Copernicus CAMS, AGAGE 할로겐, 기상청 안면도 관측소, IPCC AR7">
+    <meta name="author" content="Antigravity Climate Watch">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="지구의 숨결을 기록하다 | 온실가스 관측의 중요성">
+    <meta property="og:description" content="기후위기 극복의 핵심 열쇠인 온실가스 정밀 관측과 글로벌 5대 기후 기관의 2025~2026년 최신 연구 성과를 미려한 인터랙티브 대시보드로 확인해 보세요.">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts & Libraries -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Atmospheric Particles/Glow Effects -->
+    <div class="atmospheric-glow glow-cyan"></div>
+    <div class="atmospheric-glow glow-emerald"></div>
+    <div class="atmospheric-glow glow-amber"></div>
+
+    <!-- Navigation Bar -->
+    <header class="app-header" id="appHeader">
+        <div class="header-container">
+            <div class="logo-area" id="logoArea">
+                <span class="logo-pulse"></span>
+                <span class="logo-text">AETHER<span class="highlight">PULSE</span></span>
+            </div>
+            <nav class="nav-links" id="navLinks">
+                <a href="#hero" class="nav-item active">홈</a>
+                <a href="#importance" class="nav-item">관측의 중요성</a>
+                <a href="#agencies" class="nav-item">5대 글로벌 기관</a>
+                <a href="#dashboard" class="nav-item">트렌드 시각화</a>
+                <a href="#compare" class="nav-item">온실가스 가이드</a>
+            </nav>
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i data-lucide="menu"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="app-main">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-top-wrapper">
+                    <!-- Left: Hero Text Content -->
+                    <div class="hero-content-area">
+                        <div class="hero-tag" id="heroTag">
+                            <span class="tag-dot"></span>
+                            <span class="tag-text">2025/2026년 대기 환경 감시 최신 보고</span>
+                        </div>
+                        <h1 class="hero-title" id="heroTitle">
+                            지구의 숨결을 기록하다,<br>
+                            <span class="gradient-text">온실가스 정밀 관측</span>의 힘
+                        </h1>
+                        <p class="hero-desc" id="heroDesc">
+                            우리가 대기 중의 눈에 보이지 않는 분자들을 정확히 세지 못한다면, 탄소 중립도, 기후 미래의 예측도 불가능합니다. 
+                            세계 대표 기후 감시 기관들의 실시간 관측은 기후 위기를 이겨내기 위한 가장 투명하고 정밀한 과학적 무기입니다.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#importance" class="btn btn-primary">관측의 가치 발견하기 <i data-lucide="arrow-right"></i></a>
+                            <a href="#dashboard" class="btn btn-secondary">실시간 추이 분석</a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Cinematic Promotional Video Block (NASA Carbon Flow) -->
+                    <div class="hero-video-area" id="heroVideoArea">
+                        <div class="video-frame-glow"></div>
+                        <div class="video-container-box">
+                            <div class="video-header-bar">
+                                <span class="win-dot red"></span>
+                                <span class="win-dot yellow"></span>
+                                <span class="win-dot green"></span>
+                                <span class="win-title">NASA 대기 이산화탄소 대순환 홍보 영상</span>
+                            </div>
+                            <div class="video-iframe-wrapper">
+                                <video autoplay loop muted playsinline poster="https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005115/CO2_OCO2_Composite_5760x3240_03599_print.jpg">
+                                    <source src="https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005115/TotalCO2_OCO2_1920x1080p30.mp4" type="video/mp4">
+                                    <source src="https://assets.mixkit.co/videos/preview/mixkit-earth-in-spinning-rotation-in-space-11880-large.mp4" type="video/mp4">
+                                    지구 대기 이산화탄소 순환 비디오 재생을 지원하지 않는 브라우저입니다.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Atmospheric Metrics (2025/2026 Latest Data) -->
+                <div class="metrics-grid" id="metricsGrid">
+                    <div class="metric-card cyan-glow">
+                        <div class="metric-icon">
+                            <i data-lucide="globe"></i>
+                        </div>
+                        <div class="metric-title">이산화탄소 (CO₂)</div>
+                        <div class="metric-value"><span class="count" data-target="425.3">0</span><span class="unit"> ppm</span></div>
+                        <div class="metric-badge badge-cyan">2025 전지구 평균 (역사상 최고)</div>
+                        <p class="metric-note">산업화 이전 대비 +52% 증가, 매년 평균 2.6ppm 이상 무서운 속도로 가속화</p>
+                    </div>
+
+                    <div class="metric-card emerald-glow">
+                        <div class="metric-icon">
+                            <i data-lucide="wind"></i>
+                        </div>
+                        <div class="metric-title">메탄 (CH₄)</div>
+                        <div class="metric-value"><span class="count" data-target="1897">0</span><span class="unit"> ppb</span></div>
+                        <div class="metric-badge badge-emerald">2025 전지구 평균 (80만 년 최고)</div>
+                        <p class="metric-note">이산화탄소 대비 28배 강한 온실 효과, 최근 습지 및 화석연료 배출원 급증</p>
+                    </div>
+
+                    <div class="metric-card amber-glow">
+                        <div class="metric-icon">
+                            <i data-lucide="flame"></i>
+                        </div>
+                        <div class="metric-title">복사강제력 (AGGI)</div>
+                        <div class="metric-value"><span class="count" data-target="1.54">0</span><span class="unit"> Index</span></div>
+                        <div class="metric-badge badge-amber">1990 대비 +54% 가열</div>
+                        <p class="metric-note">1990년 대비 온실가스로 인한 지구 가열 효과 54% 가중, 그 중 81%가 CO₂ 영향</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: 관측의 4대 핵심 가치 -->
+        <section id="importance" class="importance-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Why We Observe</span>
+                    <h2 class="section-title">눈에 보이지 않는 온실가스를<br><span class="gradient-text-2">정밀하게 관측해야 하는 4가지 이유</span></h2>
+                    <p class="section-desc mx-auto">감축 행동은 측정할 수 있을 때만 유효합니다. 온실가스 관측이 왜 기후변화 해결의 중심에 서 있는지 핵심 가치를 소개합니다.</p>
+                </div>
+
+                <div class="value-grid">
+                    <div class="value-card" id="valCard1">
+                        <div class="card-glow-bg"></div>
+                        <div class="value-icon"><i data-lucide="binary"></i></div>
+                        <h3>과학적 시뮬레이션의 완성</h3>
+                        <p>컴퓨터 기후 예측 모델에 들어가는 가장 기초적이고 신뢰할 수 있는 실측값(Input)을 제공합니다. 가설이 아닌 실제 관측치를 바탕으로 해야만 기온 상승 경로와 해수면 고도를 정밀하게 예측하고 정책을 세울 수 있습니다.</p>
+                    </div>
+
+                    <div class="value-card" id="valCard2">
+                        <div class="card-glow-bg"></div>
+                        <div class="value-icon"><i data-lucide="shield-check"></i></div>
+                        <h3>글로벌 배출 감축의 투명한 검증</h3>
+                        <p>각 국가와 기업이 보고하는 장부 상의 배출량(Bottom-up)이 실제 대기 중의 농도 변화(Top-down)와 일치하는지 객관적으로 검증할 수 있는 유일한 방법입니다. 파리 협정 이행 상황을 정밀 진단하는 기후 청문회 역할을 합니다.</p>
+                    </div>
+
+                    <div class="value-card" id="valCard3">
+                        <div class="card-glow-bg"></div>
+                        <div class="value-icon"><i data-lucide="radar"></i></div>
+                        <h3>메탄 등 '슈퍼 배출원'의 조기 포착</h3>
+                        <p>이산화탄소보다 수십 배 강력하지만 분해 속도가 빠른 메탄은 초기에 배출원을 차단하면 빠른 지구 냉각 효과를 낼 수 있습니다. 초정밀 관측 위성을 통해 파이프라인 누출, 쓰레기 매립지 등의 슈퍼 배출원을 즉각 찾아 대책을 시행합니다.</p>
+                    </div>
+
+                    <div class="value-card" id="valCard4">
+                        <div class="card-glow-bg"></div>
+                        <div class="value-icon"><i data-lucide="recycle"></i></div>
+                        <h3>자연 흡수원의 피드백 이상 감지</h3>
+                        <p>숲과 바다는 인류가 배출한 이산화탄소의 절반가량을 자연적으로 흡수해 왔습니다. 하지만 기후위기 스트레스로 인해 흡수 능력이 저하되는 현상이 전 세계 관측 네트워크를 통해 감지되고 있으며, 이는 지구 시스템 붕괴의 조기 경보입니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: 5대 글로벌 관측 기관의 최신 동향 -->
+        <section id="agencies" class="agencies-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Global Guardians</span>
+                    <h2 class="section-title">대기를 감시하는<br><span class="gradient-text">글로벌 기후 관측 협력체 및 기관</span></h2>
+                    <p class="section-desc mx-auto">전 세계적인 관측 기구 및 최고 권위의 네트워크 협조를 통해 인류는 대기의 미세한 변화까지 철저하게 추적합니다. 각 기관의 최신 관측 동향을 확인해 보세요.</p>
+                </div>
+
+                <div class="agency-tab-container">
+                    <!-- Agency Tabs Selector -->
+                    <div class="agency-tabs" id="agencyTabs">
+                        <button class="agency-tab-btn active" data-agency="wmo">
+                            <span class="btn-num">01</span>
+                            <span class="btn-name">WMO <span class="sub">세계기상기구</span></span>
+                        </button>
+                        <button class="agency-tab-btn" data-agency="noaa">
+                            <span class="btn-num">02</span>
+                            <span class="btn-name">NOAA <span class="sub">미국 국립해양대기청</span></span>
+                        </button>
+                        <button class="agency-tab-btn" data-agency="nasa">
+                            <span class="btn-num">03</span>
+                            <span class="btn-name">NASA <span class="sub">미국 항공우주국</span></span>
+                        </button>
+                        <button class="agency-tab-btn" data-agency="copernicus">
+                            <span class="btn-num">04</span>
+                            <span class="btn-name">Copernicus <span class="sub">유럽 대기감시서비스</span></span>
+                        </button>
+                        <button class="agency-tab-btn" data-agency="agage">
+                            <span class="btn-num">05</span>
+                            <span class="btn-name">AGAGE <span class="sub">글로벌 할로겐 관측망</span></span>
+                        </button>
+                        <button class="agency-tab-btn" data-agency="kma">
+                            <span class="btn-num">06</span>
+                            <span class="btn-name">KMA <span class="sub">대한민국 기상청</span></span>
+                        </button>
+                        <button class="agency-tab-btn" data-agency="ipcc">
+                            <span class="btn-num">07</span>
+                            <span class="btn-name">IPCC <span class="sub">정부간 기후변화 협의체</span></span>
+                        </button>
+                    </div>
+
+                    <!-- Agency Details Display Panel -->
+                    <div class="agency-content-panel" id="agencyContentPanel">
+                        <!-- WMO Content (Active) -->
+                        <div class="agency-content active" id="content-wmo">
+                            <div class="agency-info-grid">
+                                <div class="info-text">
+                                    <div class="agency-badge">글로벌 관측의 컨트롤 타워</div>
+                                    <h3>세계기상기구 (WMO)</h3>
+                                    <p class="agency-role-desc">전 세계 기상청 및 연구소의 관측 네트워크를 조율하고, 지구적 차원의 표준화된 기후 표준 데이터를 매년 공표하는 세계 최고 권위의 환경 조율 기관입니다.</p>
+                                    
+                                    <div class="info-block">
+                                        <div class="block-title"><i data-lucide="alert-triangle"></i> 2025 최신 발표 (온실가스 연보 No. 21)</div>
+                                        <p class="block-desc">2025년 10월 발표된 보고서에 따르면, 2023년에서 2024년 사이 대기 중 이산화탄소(CO₂) 농도가 무려 <strong>3.5 ppm 폭증</strong>하는 전례 없는 현상이 발생했습니다. 이는 현대 기후 관측 역사상 가장 큰 단일 연도 증가 폭입니다. 산불과 가뭄 등으로 산림과 해양 등 자연 흡수원의 성능이 급격히 저하된 결과로 파악됩니다.</p>
+                                    </div>
+
+                                    <div class="info-block">
+                                        <div class="block-title"><i data-lucide="activity"></i> 핵심 혁신 프로젝트: G3W (Global Greenhouse Gas Watch)</div>
+                                        <p class="block-desc">2025년 10월 세계기상기구 총회에서 핵심 결의안으로 정식 채택된 **글로벌 온실가스 감시망(G3W)**은 지상 관측국, 저궤도/정지궤도 인공위성, 첨단 기상 분석 모델을 최초로 하나의 거대한 글로벌 시스템으로 통합하는 이니셔티브입니다. 기후변화 협약의 이행 현황을 과학적으로 검증할 우주-공중-지상 통합 레이더를 구성 중입니다.</p>
+                                    </div>
+                                </div>
+                                <div class="info-visual visual-wmo">
+                                    <div class="visual-card">
+                                        <div class="visual-icon-large"><i data-lucide="network"></i></div>
+                                        <div class="visual-stat">G3W</div>
+                                        <div class="visual-label">글로벌 통합 기후 망 가동</div>
+                                        <div class="visual-data">전세계 193개국 기후국 데이터 연동</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- NOAA Content -->
+                        <div class="agency-content" id="content-noaa">
+                            <div class="agency-info-grid">
+                                <div class="info-text">
+                                    <div class="agency-badge">지구의 척도를 재는 파수꾼</div>
+                                    <h3>미국 국립해양대기청 (NOAA)</h3>
+                                    <p class="agency-role-desc">미국 해양 대기 감시를 넘어 전 세계의 실시간 지상 관측 네트워크(GML)를 리드하며, 기후변화 분석의 절대적 기준이자 지표인 ‘킬링 곡선’ 연구를 계승하고 있습니다.</p>
+                                    
+                                    <div class="info-block">
+                                        <div class="block-title"><i data-lucide="mountain"></i> 2025 역사적 임계점 돌파: Mauna Loa 430 ppm 돌파</div>
+                                        <p class="block-desc">NOAA 글로벌모니터링연구소(GML)에 따르면, 하와이 마우나 로아 천문대에서 측정한 **2025년 5월 CO₂ 농도가 430.2~430.5 ppm을 기록하며 인류 역사상 최초로 430 ppm의 장벽을 초과**했습니다. 2022년의 화산 폭발로 인한 장비 일시 중단 사태를 완전히 극복하고, 인류의 화석연료 연소가 여전히 대기 가속화를 이끌고 있음을 입증하는 확실한 척도를 재설정했습니다.</p>
+                                    </div>
+
+                                    <div class="info-block">
+                                        <div class="block-title"><i data-lucide="trending-up"></i> 핵심 지표: AGGI (Annual Greenhouse Gas Index)</div>
+                                        <p class="block-desc">NOAA의 연간 온실가스 지수(AGGI)는 **2024년 기준 1.54**에 도달했습니다. 이는 기후 회의 기준점인 1990년 대비, 온실가스가 붙잡아두는 직접 복사강제력(지구 가열 효과)이 34년 만에 **54% 폭증**했다는 뜻입니다. 이 지열 상승 원인의 약 81%가 인위적 이산화탄소 누적에 의해 주도되고 있습니다.</p>
+                                    </div>
+                                </div>
+                                <div class="info-visual visual-noaa">
+                                    <div class="visual-card">
+                                        <div class="visual-icon-large"><i data-lucide="gauge"></i></div>
+                                        <div class="visual-stat">1.54 Index</div>
+                                        <div class="visual-label">NOAA 연간 온실가스 지수 (AGGI)</div>
+                                        <div class="visual-data">1990년 기준(1.0) 대비 +54% 열 축적</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- NASA Content -->
+                        <div class="agency-content" id="content-nasa">
+                            <div class="agency-info-grid">
+                                <div class="info-text">
+                                    <div class="agency-badge">우주에서 기후를 꿰뚫다</div>
+                                    <h3>미국 항공우주국 (NASA)</h3>
+                                    <p class="agency-role-desc">대기권 밖 궤도에서 지구를 입체적으로 내려다보며 탄소의 배출과 순환을 고정밀 지도와 시뮬레이션으로 시각화하는 우주 기반 대기 분석의 최고 강자입니다.</p>
+                                    
+                                    <div class="info-block">
+                                        <div class="block-title"><i data-lucide="eye"></i> 우주 관측의 핵심: EMIT 미션 2025/2026 연장 가동</div>
+                                        <p class="block-desc">국제우주정거장(ISS)에 탑재된 NASA의 지구 표면 광물 먼지 조사 기기인 **EMIT**은 당초 미세먼지 조사용이었으나, 탁월한 메탄 포착 성능으로 인해 **2025~2026년까지 임무를 긴급 연장**했습니다. 2025년 4월 배포된 Version 2 데이터를 통해, 전 세계의 쓰레기 매립지, 화석연료 가스 밸브, 고밀도 축산 단지에서 무단 방출되는 메탄 '슈퍼 배출원'을 60m의 미터급 초고해상도로 정밀 탐색하고 있습니다.</p>
+                                    </div>
+
+                                    <div class="info-block">
+                                        <div class="block-title"><i data-lucide="satellite"></i> OCO-2 & OCO-3 위성 및 2일 초저지연 배포</div>
+                                        <p class="block-desc">탄소 관측 전용 위성 OCO-2와 OCO-3는 2026년 현재까지도 활발히 기동하며, 전 세계 메가시티 상공의 이산화탄소 농도를 측정합니다. 최근 NASA는 전 세계 과학계와 탄소 거래소의 조기 대응을 위해 **데이터 처리 속도를 혁신하여 2일 이내(Low-latency)에 보정된 탄소 농도 정보를 완전 오픈소스로 전 세계에 공개**하고 있습니다.</p>
+                                    </div>
+                                </div>
+                                <div class="info-visual visual-nasa">
+                                    <div class="visual-card">
+                                        <div class="visual-icon-large"><i data-lucide="satellite-dish"></i></div>
+                                        <div class="visual-stat">60m Res</div>
+                                        <div class="visual-label">EMIT 메탄 수퍼 배출원 탐지 해상도</div>
+                                        <div class="visual-data">매립지 및 송유관 가스 누출 지점 핀포인트 포착</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Copernicus Content -->
+                        <div class="agency-content" id="content-copernicus">
+                            <div class="agency-info-grid">
+                                <div class="info-text">
+                                    <div class="agency-badge">대기 예보와 데이터 융합의 명가</div>
+                                    <h3>유럽 코페르니쿠스 대기감시서비스 (CAMS)</h3>
+                                    <p class="agency-role-desc">유럽연합(EU)의 우주 계획 및 ECMWF(유럽중기예보센터)의 인프라를 바탕으로, 실시간 위성 자료와 글로벌 관측을 인공지능 기계학습 모델과 융합해 매일 대기 질과 온실가스를 예보하고 분석합니다.</p>
+                                    
+                                    <div class="info-block">
+                                        <div class="block-title"><i data-lucide="bar-chart-3"></i> 2026년 4월 확정 보고: 2025 전 지구 평균 신기록</div>
+                                        <p class="block-desc">CAMS의 위성 관측 데이터 정밀 재분석 결과, **2025년 글로벌 연평균 이산화탄소(CO₂) 농도는 약 425.3 ppm을 기록**하며 전년 대비 2.6 ppm 급증했습니다. 이는 지구 환경 역사상 **최소 200만 년 동안 겪어보지 못한 최고 수준**입니다. 대기 중 **메탄(CH₄) 평균값 역시 1897 ppb에 도달**하며 위성 관측 이래 최악이자 지난 80만 년 중 가장 높은 수치로 밝혀졌습니다.</p>
+                                    </div>
+
+                                    <div class="info-block">
+                                        <div class="block-title"><i data-lucide="cpu"></i> 2026년 5월 최신 업그레이드: 50r1 사이클 가동</div>
+                                        <p class="block-desc">CAMS는 2026년 5월 글로벌 대기 분석 시스템을 <strong>50r1 버전으로 대대적으로 업그레이드</strong>했습니다. 이를 통해 Sentinel-5P 위성의 TROPOMI 메탄 분석 장비를 일간 분석 로직에 완벽 연동했으며, 인류 배출원 검증 지원 시스템인 <strong>CO2MVS</strong>(CO₂ Monitoring & Verification Support)의 완전 정착을 이끌며 기후 정책을 위한 탄소 배출 증명서를 제공합니다.</p>
+                                    </div>
+                                </div>
+                                <div class="info-visual visual-copernicus">
+                                    <div class="visual-card">
+                                        <div class="visual-icon-large"><i data-lucide="database"></i></div>
+                                        <div class="visual-stat">CO2MVS</div>
+                                        <div class="visual-label">EU 탄소 배출 정밀 검증 지원</div>
+                                        <div class="visual-data">2026 최신 50r1 대기 통합 분석 엔진 탑재</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AGAGE Content -->
+                        <div class="agency-content" id="content-agage">
+                            <div class="agency-info-grid">
+                                <div class="info-text">
+                                    <div class="agency-badge">할로겐 및 프레온 가스 추적의 대가</div>
+                                    <h3>글로벌 할로겐 관측망 (AGAGE)</h3>
+                                    <p class="agency-role-desc">지구 온난화 강도가 극도로 높으며 오존층을 파괴하는 염화불화탄소(CFCs), 수소불화탄소(HFCs) 등 온실 할로겐 화합물을 전 지구적으로 초정밀 모니터링하는 최첨단 관측 네트워크입니다.</p>
+                                    
+                                    <div class="info-block">
+                                        <div class="block-title"><i data-lucide="shield-alert"></i> 기후 변화의 숨은 복병: 할로겐계 가스 포착</div>
+                                        <p class="block-desc">CFC, HCFC, HFC 등 할로겐화 탄소류는 대기 중 농도는 매우 낮지만 이산화탄소 대비 수천~수만 배에 달하는 초강력 온난화 지수(GWP)를 가지고 있습니다. AGAGE는 전 세계 주요 청정 지역에 위치한 지상 관측소에서 이들의 미세한 농도 변화와 유입 경로를 밀리초 단위의 정확도로 분석해 냅니다.</p>
+                                    </div>
+
+                                    <div class="info-block">
+                                        <div class="block-title"><i data-lucide="search-code"></i> 핵심 프로젝트 및 감시: 몬트리올 의정서 검증</div>
+                                        <p class="block-desc">AGAGE는 오존층 파괴 물질의 무단 배출원을 핀포인트로 식별합니다. 특히 동아시아 지역에서 몬트리올 의정서 규정을 위반하고 배출되던 프레온가스(CFC-11)의 비정상적 증가 흐름을 지상 기지국 데이터를 기반으로 포착하여 국제 학계에 보고, 배출 규제를 강제하는 강력한 과학적 근거를 제공한 기념비적 성과를 보유하고 있습니다.</p>
+                                    </div>
+                                </div>
+                                <div class="info-visual visual-agage">
+                                    <div class="visual-card">
+                                        <div class="visual-icon-large"><i data-lucide="shield"></i></div>
+                                        <div class="visual-stat">Halocarbons</div>
+                                        <div class="visual-label">몬트리올 의정서 검증망</div>
+                                        <div class="visual-data">전 세계 HFCs/CFCs 초정밀 실시간 분석</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- KMA Content -->
+                        <div class="agency-content" id="content-kma">
+                            <div class="agency-info-grid">
+                                <div class="info-text">
+                                    <div class="agency-badge">동아시아 기후 감시의 중추</div>
+                                    <h3>대한민국 기상청 (KMA)</h3>
+                                    <p class="agency-role-desc">WMO 대기감시(GAW) 프로그램의 주요 동아시아 거점으로서 한반도와 동아시아 상공의 온실가스를 지상, 항공, 선박을 연계하여 정밀 계측하는 아시아 최고의 대기 감시 리더입니다.</p>
+                                    
+                                    <div class="info-block">
+                                        <div class="block-title"><i data-lucide="map-pin"></i> 안면도 WMO 세계기상기구 공식 기후변화감시소</div>
+                                        <p class="block-desc">1999년부터 가동을 시작한 기상청 안면도 기후변화감시소는 동아시아 대표 기후 관측 거점으로 지정되어 한반도의 탄소 거동을 장기 관측해 왔습니다. 2025~2026년 기준 안면도 관측소는 WMO 기준에 부합하는 이산화탄소, 메탄, 아산화질소 등 7대 핵심 온실가스를 일간 모니터링하여 국제 기후 기구에 실시간으로 공유하고 있습니다.</p>
+                                    </div>
+
+                                    <div class="info-block">
+                                        <div class="block-title"><i data-lucide="plane"></i> 한반도 온실가스 3차원 입체 기후 관측 프로젝트</div>
+                                        <p class="block-desc">KMA는 안면도, 고산, 울릉도독도 등 3대 지상 관측기지를 넘어, 기상항공기(나라온호)와 온실가스 선박 관측망을 연계하여 한반도 대기 수직 기둥의 탄소 밀도를 계측하는 3차원 종합 감시망을 가동하고 있습니다. 기상청의 첨단 관측망은 동아시아 메탄 배출원 식별 및 한국의 2050 탄소중립 이행 검증에 결정적인 기여를 하고 있습니다.</p>
+                                    </div>
+                                </div>
+                                <div class="info-visual visual-kma">
+                                    <div class="visual-card">
+                                        <div class="visual-icon-large"><i data-lucide="plane"></i></div>
+                                        <div class="visual-stat">Anmyeon-do</div>
+                                        <div class="visual-label">WMO 대기감시(GAW) 지역거점</div>
+                                        <div class="visual-data">지상·기상항공기·선박 3D 입체 기후감시</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- IPCC Content -->
+                        <div class="agency-content" id="content-ipcc">
+                            <div class="agency-info-grid">
+                                <div class="info-text">
+                                    <div class="agency-badge">지구의 정책 나침반</div>
+                                    <h3>기후변화에 관한 정부간 협의체 (IPCC)</h3>
+                                    <p class="agency-role-desc">IPCC는 직접 계측기를 들고 필드에서 기후를 관측하지는 않지만, 전 세계 기후 과학자들이 다른 4대 기관 등에서 제공한 방대한 관측 문헌과 연구를 종합 평가하고 유엔 및 개별국 배출 감축 가이드라인을 제공합니다.</p>
+                                    
+                                    <div class="info-block">
+                                        <div class="block-title"><i data-lucide="book-open"></i> 2025/2026 현황: 제7차 평가 주기 (AR7) 본격 가동</div>
+                                        <p class="block-desc">IPCC는 2023년 7월 출범한 **제7차 평가 주기(AR7)**를 성황리에 집필 중입니다. 현재 2025년과 2026년에 걸쳐 각 실무그룹의 집필 주 저자 회의 및 정부 초안 검토를 추진하고 있으며, 완성 보고서의 UNFCCC 파리협정 ‘글로벌 이행점검(Global Stocktake)’ 일정 조율을 위한 고위급 논의를 이어가고 있습니다.</p>
+                                    </div>
+
+                                    <div class="info-block">
+                                        <div class="block-title"><i data-lucide="table"></i> 핵심 프로젝트: 2027 탄소 흡수 및 단기 기후 영향 가이드</div>
+                                        <p class="block-desc">국가 인벤토리 태스크포스(TFI)를 중심으로, 각국 정부가 2027년까지 의무 보고 및 제출해야 하는 **‘단기 기후 영향 물질(SLCF)’ 측정 지침서**와 **‘이산화탄소 흡수(CDR/CCUS) 기술’에 대한 국가 산정 방법론 보고서**를 개발 중입니다. 이는 지구 관측 데이터를 장부와 대조하여 실제 탄소가 얼만큼 격리 및 매립되었는지를 규정할 글로벌 가이드가 될 것입니다.</p>
+                                    </div>
+                                </div>
+                                <div class="info-visual visual-ipcc">
+                                    <div class="visual-card">
+                                        <div class="visual-icon-large"><i data-lucide="clipboard-list"></i></div>
+                                        <div class="visual-stat">AR7 Cycle</div>
+                                        <div class="visual-label">제7차 기후 종합 평가 보고서 수립</div>
+                                        <div class="visual-data">2027년 국가 배출량 신규 지침서 발표 조준</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: 대기 추이 차트 시각화 -->
+        <section id="dashboard" class="dashboard-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Data Visualization</span>
+                    <h2 class="section-title">글로벌 온실가스<br><span class="gradient-text-2">실시간 대기 트렌드 분석</span></h2>
+                    <p class="section-desc mx-auto">글로벌 기후 관측망이 수십 년간 기록한 실제 축적 데이터를 차트로 분석합니다. 카테고리를 전환하며 농도 변화 속도를 직접 느껴보세요.</p>
+                </div>
+
+                <div class="chart-wrapper">
+                    <!-- Chart Toggles -->
+                    <div class="chart-controls" id="chartControls">
+                        <button class="chart-btn active" data-chart="co2" id="co2Btn">
+                            <span class="dot co2-dot"></span>
+                            <span class="btn-lbl">CO₂ 이산화탄소 농도 (1958~2025)</span>
+                        </button>
+                        <button class="chart-btn" data-chart="ch4" id="ch4Btn">
+                            <span class="dot ch4-dot"></span>
+                            <span class="btn-lbl">CH₄ 메탄 농도 추이 (2015~2025)</span>
+                        </button>
+                        <button class="chart-btn" data-chart="aggi" id="aggiBtn">
+                            <span class="dot aggi-dot"></span>
+                            <span class="btn-lbl">AGGI 지구 복사강제력 (1990~2024)</span>
+                        </button>
+                    </div>
+
+                    <!-- Chart Box -->
+                    <div class="chart-box">
+                        <div class="chart-inner-header">
+                            <div class="chart-title-area">
+                                <h4 id="chartTitle">이산화탄소(CO₂) 농도 장기 변화 (NOAA 킬링 곡선)</h4>
+                                <p id="chartSubtitle">하와이 마우나 로아 관측소에서 기록한 최초의 연속 실측 곡선 및 2025 역사상 첫 430 ppm 돌파</p>
+                            </div>
+                            <div class="chart-legend" id="chartLegend">
+                                <span class="legend-badge"><span class="legend-dot"></span> <span id="legendText">CO₂ 농도 (ppm)</span></span>
+                            </div>
+                        </div>
+                        <div class="chart-canvas-container">
+                            <canvas id="ghgTrendsChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: 온실가스 주요 특성 비교 -->
+        <section id="compare" class="compare-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Greenhouse Gases Guide</span>
+                    <h2 class="section-title">기후 가열을 유도하는<br><span class="gradient-text">교토의정서 7대 규제가스 비교</span></h2>
+                    <p class="section-desc mx-auto">교토의정서에서 규정한 7대 온실가스의 고유한 파괴력과 대기 내 수명, 그리고 이들을 정밀 감시하기 위해 전 세계 글로벌 관측망이 사용하는 최첨단 관측 기술을 비교합니다.</p>
+                </div>
+
+                <div class="compare-grid">
+                    <!-- CO2 Card -->
+                    <div class="gas-card gas-co2">
+                        <div class="gas-card-header">
+                            <div class="gas-formula">CO₂</div>
+                            <div class="gas-name">이산화탄소</div>
+                        </div>
+                        <div class="gas-body">
+                            <div class="gas-stat-row">
+                                <span class="lbl">지구온난화지수 (GWP)</span>
+                                <span class="val">1 <span class="sub">(기준값)</span></span>
+                            </div>
+                            <div class="gas-stat-row">
+                                <span class="lbl">대기 중 잔존 수명</span>
+                                <span class="val">수백 년 ~ 수만 년</span>
+                            </div>
+                            <div class="gas-stat-row">
+                                <span class="lbl">가열 기여율 (AGGI 기준)</span>
+                                <span class="val">81.0% <span class="sub">(부동의 1위)</span></span>
+                            </div>
+                            <div class="gas-stat-row flex-col">
+                                <span class="lbl margin-b">주요 관측 테크놀로지</span>
+                                <span class="val-text"><i data-lucide="check-circle-2"></i> 지상 국소적 NDIR(비분산 적외선) 측정법</span>
+                                <span class="val-text"><i data-lucide="check-circle-2"></i> NASA OCO 인공위성 탑재 근적외선 회절 분광기</span>
+                            </div>
+                            <p class="gas-card-desc">인류의 화석연료 연소로 인해 발생하며 한번 배출되면 반영구적으로 지구를 가두는 기후 파괴의 근본적인 척도입니다.</p>
+                        </div>
+                    </div>
+
+                    <!-- CH4 Card -->
+                    <div class="gas-card gas-ch4">
+                        <div class="gas-card-header">
+                            <div class="gas-formula">CH₄</div>
+                            <div class="gas-name">메탄</div>
+                        </div>
+                        <div class="gas-body">
+                            <div class="gas-stat-row">
+                                <span class="lbl">지구온난화지수 (GWP)</span>
+                                <span class="val">28 ~ 36 <span class="sub">(극도로 강함)</span></span>
+                            </div>
+                            <div class="gas-stat-row">
+                                <span class="lbl">대기 중 잔존 수명</span>
+                                <span class="val">약 11.8년 <span class="sub">(단기 잔류)</span></span>
+                            </div>
+                            <div class="gas-stat-row">
+                                <span class="lbl">가열 기여율 (AGGI 기준)</span>
+                                <span class="val">약 11% ~ 15%</span>
+                            </div>
+                            <div class="gas-stat-row flex-col">
+                                <span class="lbl margin-b">주요 관측 테크놀로지</span>
+                                <span class="val-text"><i data-lucide="check-circle-2"></i> NASA EMIT 이미지 스펙트로미터 (ISS 장비)</span>
+                                <span class="val-text"><i data-lucide="check-circle-2"></i> 유럽 Sentinel-5P 위성의 TROPOMI 센서</span>
+                            </div>
+                            <p class="gas-card-desc">대기 중 수명은 12년 내외로 짧지만 온실 파괴력은 30배에 달하므로, 메탄 누출을 즉시 포착하면 단기적인 온도 상승 차단에 직효약입니다.</p>
+                        </div>
+                    </div>
+
+                    <!-- N2O Card -->
+                    <div class="gas-card gas-n2o">
+                        <div class="gas-card-header">
+                            <div class="gas-formula">N₂O</div>
+                            <div class="gas-name">아산화질소</div>
+                        </div>
+                        <div class="gas-body">
+                            <div class="gas-stat-row">
+                                <span class="lbl">지구온난화지수 (GWP)</span>
+                                <span class="val">265 ~ 298 <span class="sub">(압도적 강도)</span></span>
+                            </div>
+                            <div class="gas-stat-row">
+                                <span class="lbl">대기 중 잔존 수명</span>
+                                <span class="val">약 109년 <span class="sub">(초장기 잔류)</span></span>
+                            </div>
+                            <div class="gas-stat-row">
+                                <span class="lbl">가열 기여율 (AGGI 기준)</span>
+                                <span class="val">약 6% ~ 8%</span>
+                            </div>
+                            <div class="gas-stat-row flex-col">
+                                <span class="lbl margin-b">주요 관측 테크놀로지</span>
+                                <span class="val-text"><i data-lucide="check-circle-2"></i> 글로벌 WMO 지상 가스 모니터링 가스크로마토그래피</span>
+                                <span class="val-text"><i data-lucide="check-circle-2"></i> 대기 흡수 스펙트럼 레이저 분광법 (CRDS)</span>
+                            </div>
+                            <p class="gas-card-desc">화학 비료 과다 도포와 산업 공정에서 기인하며, 무려 100년 넘는 대기 수명과 분자당 극도로 강력한 기열 위력을 가진 숨은 악마입니다.</p>
+                        </div>
+                    </div>
+
+                    <!-- SF6 Card -->
+                    <div class="gas-card gas-sf6">
+                        <div class="gas-card-header">
+                            <div class="gas-formula">SF₆</div>
+                            <div class="gas-name">육불화황</div>
+                        </div>
+                        <div class="gas-body">
+                            <div class="gas-stat-row">
+                                <span class="lbl">지구온난화지수 (GWP)</span>
+                                <span class="val">23,500 <span class="sub">(최강의 파괴력)</span></span>
+                            </div>
+                            <div class="gas-stat-row">
+                                <span class="lbl">대기 중 잔존 수명</span>
+                                <span class="val">약 3,200년 <span class="sub">(영구 잔류)</span></span>
+                            </div>
+                            <div class="gas-stat-row">
+                                <span class="lbl">가열 기여율 (AGGI 기준)</span>
+                                <span class="val">약 1% 미만 <span class="sub">(상승세 위험)</span></span>
+                            </div>
+                            <div class="gas-stat-row flex-col">
+                                <span class="lbl margin-b">주요 관측 테크놀로지</span>
+                                <span class="val-text"><i data-lucide="check-circle-2"></i> AGAGE Medusa 고정밀 GC-MS 실시간 계측</span>
+                                <span class="val-text"><i data-lucide="check-circle-2"></i> 지상 전자포획검출기 가스크로마토그래피 (GC-ECD)</span>
+                            </div>
+                            <p class="gas-card-desc">중전기기 절연체 및 반도체 공정에 널리 사용되며, 단일 분자당 지구온난화 효과가 CO₂의 23,500배에 달하는 사상 최악의 영구 온실가스입니다.</p>
+                        </div>
+                    </div>
+
+                    <!-- HFCs Card -->
+                    <div class="gas-card gas-hfcs">
+                        <div class="gas-card-header">
+                            <div class="gas-formula">HFCs</div>
+                            <div class="gas-name">수소불화탄소</div>
+                        </div>
+                        <div class="gas-body">
+                            <div class="gas-stat-row">
+                                <span class="lbl">지구온난화지수 (GWP)</span>
+                                <span class="val">12 ~ 14,800 <span class="sub">(다양한 조성)</span></span>
+                            </div>
+                            <div class="gas-stat-row">
+                                <span class="lbl">대기 중 잔존 수명</span>
+                                <span class="val">수개월 ~ 약 270년</span>
+                            </div>
+                            <div class="gas-stat-row">
+                                <span class="lbl">가열 기여율 (AGGI 기준)</span>
+                                <span class="val">약 1.5% <span class="sub">(빠른 가속도)</span></span>
+                            </div>
+                            <div class="gas-stat-row flex-col">
+                                <span class="lbl margin-b">주요 관측 테크놀로지</span>
+                                <span class="val-text"><i data-lucide="check-circle-2"></i> AGAGE 글로벌 모니터링 가스크로마토그래피-질량분석기</span>
+                                <span class="val-text"><i data-lucide="check-circle-2"></i> FTIR (푸리에 변환 적외선 분광법) 주간 감시</span>
+                            </div>
+                            <p class="gas-card-desc">프레온 가스 대체재로 냉매 및 에어컨에 널리 도입되었으나, 가열력이 치명적이어서 키갈리 개정을 통해 범지구적 단계 감축 규제를 받고 있습니다.</p>
+                        </div>
+                    </div>
+
+                    <!-- PFCs Card -->
+                    <div class="gas-card gas-pfcs">
+                        <div class="gas-card-header">
+                            <div class="gas-formula">PFCs</div>
+                            <div class="gas-name">과불화탄소</div>
+                        </div>
+                        <div class="gas-body">
+                            <div class="gas-stat-row">
+                                <span class="lbl">지구온난화지수 (GWP)</span>
+                                <span class="val">7,390 ~ 12,200 <span class="sub">(극초강력)</span></span>
+                            </div>
+                            <div class="gas-stat-row">
+                                <span class="lbl">대기 중 잔존 수명</span>
+                                <span class="val">2,600 ~ 50,000년 <span class="sub">(지질학적 수명)</span></span>
+                            </div>
+                            <div class="gas-stat-row">
+                                <span class="lbl">가열 기여율 (AGGI 기준)</span>
+                                <span class="val">약 0.5% 미만 <span class="sub">(누적 흉터)</span></span>
+                            </div>
+                            <div class="gas-stat-row flex-col">
+                                <span class="lbl margin-b">주요 관측 테크놀로지</span>
+                                <span class="val-text"><i data-lucide="check-circle-2"></i> 대기 진공 캐니스터 포집 & 극저온 농축 열탈착 분석</span>
+                                <span class="val-text"><i data-lucide="check-circle-2"></i> Medusa 정밀 공기 분석 질량분석 장비</span>
+                            </div>
+                            <p class="gas-card-desc">반도체 식각 공정 및 알루미늄 제련 부산물로 나오며, 대기 중 수명이 최장 5만 년에 달해 인류 문명이 남기는 영구적인 기후 흔적입니다.</p>
+                        </div>
+                    </div>
+
+                    <!-- NF3 Card -->
+                    <div class="gas-card gas-nf3">
+                        <div class="gas-card-header">
+                            <div class="gas-formula">NF₃</div>
+                            <div class="gas-name">삼불화질소</div>
+                        </div>
+                        <div class="gas-body">
+                            <div class="gas-stat-row">
+                                <span class="lbl">지구온난화지수 (GWP)</span>
+                                <span class="val">17,200 <span class="sub">(초고밀도 파괴)</span></span>
+                            </div>
+                            <div class="gas-stat-row">
+                                <span class="lbl">대기 중 잔존 수명</span>
+                                <span class="val">약 740년 <span class="sub">(긴 안정성)</span></span>
+                            </div>
+                            <div class="gas-stat-row">
+                                <span class="lbl">가열 기여율 (AGGI 기준)</span>
+                                <span class="val">약 0.2% 미만 <span class="sub">(신흥 위협)</span></span>
+                            </div>
+                            <div class="gas-stat-row flex-col">
+                                <span class="lbl margin-b">주요 관측 테크놀로지</span>
+                                <span class="val-text"><i data-lucide="check-circle-2"></i> 고상 흡착 트랩 기반 Medusa 고감도 GC-MS 검출</span>
+                                <span class="val-text"><i data-lucide="check-circle-2"></i> 지상 태양 흡수 고해상도 FTIR 분광법</span>
+                            </div>
+                            <p class="gas-card-desc">반도체 및 디스플레이 챔버 청정용 가스로 고안되었으나, 대기 배출 시 가열력이 무시무시하여 농도가 급상승하고 있는 최신 핵심 규제종입니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        <div class="container footer-container">
+            <div class="footer-logo">
+                <span class="logo-pulse"></span>
+                <span class="logo-text">AETHER<span class="highlight">PULSE</span></span>
+            </div>
+            <p class="footer-info">본 웹사이트는 최신 기후변화 과학 지표의 통합 모니터링 중요성을 전파하기 위해 설계되었습니다.<br>데이터 및 프로젝트 출처: WMO Bulletin 2025, NOAA AGGI 2024, NASA JPL, Copernicus CAMS Report 2026, AGAGE Network, 대한민국 기상청(KMA) 기후감시보고서, IPCC TFI AR7.</p>
+            <div class="footer-bottom">
+                <div class="footer-copyright">&copy; 2026 AETHERPULSE. All rights reserved. Designed for Premium Interactive Web.</div>
+                <div class="footer-social">
+                    <a href="https://gml.noaa.gov/aggi/" target="_blank" title="NOAA AGGI Link"><i data-lucide="globe"></i></a>
+                    <a href="https://wmo.int" target="_blank" title="WMO Link"><i data-lucide="shield-alert"></i></a>
+                    <a href="https://earth.gov" target="_blank" title="US Earth Portal"><i data-lucide="satellite"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
